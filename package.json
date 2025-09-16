@@ -1,0 +1,76 @@
+{
+  "private": true,
+  "name": "microfox",
+  "scripts": {
+    "changeset": "changeset",
+    "ci:release": "turbo clean && changeset publish",
+    "ci:version": "changeset version && npm install",
+    "build": "turbo build",
+    "build:watch": "turbo build -- --watch",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "prettier-check": "prettier --check \"**/*.{js,ts,tsx,md,mdx}\"",
+    "type-check": "turbo type-check",
+    "prettier-fix": "prettier --write \"**/*.{js,ts,tsx,md,mdx}\"",
+    "test": "turbo test -- --passWithNoTests --",
+    "test:watch": "turbo test --watch",
+    "test:coverage": "turbo test --coverage",
+    "clean-examples": "node .github/scripts/cleanup-examples-changesets.mjs && npm install"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --ignore-unknown --write"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.27.10",
+    "eslint": "8.57.1",
+    "prettier": "^3.3.3",
+    "tsup": "^8",
+    "turbo": "2.3.3",
+    "typescript": "5.6.3",
+    "@babel/parser": "^7.28.4",
+    "esbuild": "^0.25.0",
+    "eslint-config-microfox": "*",
+    "npm-run-all2": "^7.0.2",
+    "serverless": "^3.40.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tools/*",
+    "examples/*",
+    "scripts/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microfox-ai/microfox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microfox-ai/microfox/issues"
+  },
+  "keywords": [
+    "microfox"
+  ],
+  "packageManager": "npm@10.2.4",
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@remotion/google-fonts": "4.0.347",
+    "glob": "^11.0.1",
+    "zod": "^3.24.3",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "type": "module"
+}
