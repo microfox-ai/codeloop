@@ -1,0 +1,17 @@
+{
+  "name": "eslint-config-microfox",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint-config-next": "^14.2.3",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-turbo": "^2.3.0",
+    "eslint-plugin-react": "7.34.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
