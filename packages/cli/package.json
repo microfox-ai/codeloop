@@ -1,0 +1,65 @@
+{
+  "name": "@microfox/tracker-cli",
+  "version": "1.0.0",
+  "description": "Universal CLI tool for creating modern TypeScript packages with npm availability checking",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "tracker-cli": "./dist/cli.js"
+  },
+  "files": [
+    "dist/**/*",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "clean": "rm -rf dist",
+    "lint": "eslint \"./**/*.ts*\"",
+    "prettier-check": "prettier --check \"./**/*.ts*\""
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^14.0.0",
+    "find-up": "^7.0.0",
+    "glob": "^10.4.5",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@microfox/tracker": "^1.0.3",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^24.0.8",
+    "tsup": "^8",
+    "typescript": "5.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "homepage": "https://github.com/microfox-ai/microfox",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microfox-ai/microfox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microfox-ai/microfox/issues"
+  },
+  "keywords": [
+    "microfox",
+    "tracker",
+    "cli",
+    "tool",
+    "package-management",
+    "typescript"
+  ]
+}
