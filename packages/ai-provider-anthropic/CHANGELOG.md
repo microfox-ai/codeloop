@@ -1,5 +1,11 @@
 # @microfox/ai-provider-google
 
+## 1.3.1
+
+### Patch Changes
+
+- 24adff3: update dependencies
+
 ## 1.3.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @microfox/ai-provider-perplexity
 
+## 1.2.1
+
+### Patch Changes
+
+- 24adff3: update dependencies
+
 ## 1.2.0
 
 ### Minor Changes
